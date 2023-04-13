@@ -31,7 +31,11 @@
                         <td>{{ $usuario->name }}</td>
                         <td>{{ $usuario->email }}</td>
                         <td><a href="{{ url('usuario/'.$usuario->id.'/edit') }}">Editar Usuario</a></td>
-                        
+                        <td><form action="{{ url('usuario/'.$usuario->id) }}" method="POST">
+                            @method('DELETE')
+                            @csrf
+                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                            </form></td>
                     </tr>
                 @endforeach
             </tbody>
