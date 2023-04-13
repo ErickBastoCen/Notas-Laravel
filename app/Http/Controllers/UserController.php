@@ -44,7 +44,8 @@ class UserController extends Controller
         $usuario->password = $request->input('contraseña');
         $usuario->remember_token = $request->input('contraseña_2');
         $usuario->save();
-        return redirect()->route('user.index');
+        $users = User::all();
+        return view('user.index', ['usuarios' => $users]);
 
 
     }
@@ -69,9 +70,24 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request, $id)
     {
-        //
+        $request -> validate([
+            
+            'nombre' =>'required|max:255',
+            'email' =>'nullable|email',
+            'contraseña' =>'required|min:6',
+            'contraseña_2'=>'required|min:6',
+            
+        ]);
+        $usuario = User::find($id);
+        $usuario->name = $request->input('nombre');
+        $usuario->email = $request->input('email');
+        $usuario->password = $request->input('contraseña');
+        $usuario->remember_token = $request->input('contraseña_2');
+        $usuario->save();
+        $users = User::all();
+        return view('user.index', ['usuarios' => $users]);
     }
 
     /**
