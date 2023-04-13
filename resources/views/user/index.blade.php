@@ -14,4 +14,26 @@
     <a href="{{ url('usuario/create')}}" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
         Agregar Usuario
     </a>
+    <br>
+    <center>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>E-mail</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($usuarios as $usuario)
+                    <tr>
+                        <td>{{ $usuario->id }}</td>
+                        <td>{{ $usuario->name }}</td>
+                        <td>{{ $usuario->email }}</td>
+                        
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </center>
 </main>
