@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('tema', 200);
             $table->unsignedBigInteger('subject_id');
             $table->timestamps();
-            $table->foreign('subject_id')->references('id')->on('subjects');
+            $table->foreign('subject_id')->references('id')->on('subjects')->onDelete('cascade');
         });
     }
 
