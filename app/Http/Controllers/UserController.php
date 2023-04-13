@@ -20,7 +20,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('user.create');
     }
 
     /**
@@ -28,7 +28,23 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request -> validate([
+            
+            'nombre' =>'required|max:255',
+            'email' =>'nullable|email',
+            'contraseña' =>'required|min:6',
+            'contraseña_2'=>'required|min:6',
+            
+        ]);
+        $usuario = new User();
+        $usuario->name = $request->input('nombre');
+        $usuario->email = $request->input('email');
+        $usuario->password = $request->input('contraseña');
+        $usuario->remember_token = $request->input('contraseña_2');
+        $usuario->save();
+        return redirect()->route('user.index');
+
+
     }
 
     /**
