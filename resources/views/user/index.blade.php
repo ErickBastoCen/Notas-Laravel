@@ -30,6 +30,7 @@
                         <td>{{ $usuario->id }}</td>
                         <td>{{ $usuario->name }}</td>
                         <td>{{ $usuario->email }}</td>
+                        <td><a href="{{ url('usuario/'.$usuario->id.'/edit') }}">Editar Usuario</a></td>
                         
                     </tr>
                 @endforeach

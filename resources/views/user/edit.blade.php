@@ -1,13 +1,13 @@
 @extends ('layout/template')
 
-@section('title', 'Registrar | TEC MOTUL')
+@section('title', 'Actualizar | TEC MOTUL')
 
 @section('contenido')
 
 
 <main>
     <div>
-        <h1 class="text-3xl font-bold underline">Registrar Usuario</h1>
+        <h1 class="text-3xl font-bold underline">Actualizar Usuario</h1>
 
         @if ($errors->any())
         <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
@@ -21,19 +21,20 @@
         
     </div>
     <center>
-        <form action="{{url('usuario')}}" method="post">
+        <form action="{{url('usuario/'.$usuario->id )}}" method="post">
+            @method("PUT")
             @csrf
             <div>
                 <label for="nombre"> Nombre: </label>
                 <div>
-                    <input type="text" name="nombre" id="nombre" value="{{ old('nombre') }}">
+                    <input type="text" name="nombre" id="nombre" value="{{ $usuario->name }}">
                 </div>
             </div>
 
             <div>
                 <label for="email"> Email: </label>
                 <div>
-                    <input type="text" name="email" id="email" value="{{ old('email') }}">
+                    <input type="text" name="email" id="email" value="{{ $usuario->email }}">
                 </div>
             </div>
 
@@ -41,14 +42,14 @@
             <div>
                 <label for="contraseña"> Contraseña: </label>
                 <div>
-                    <input type="password" name="contraseña" id="contraseña" value="{{ old('contraseña') }}">
+                    <input type="password" name="contraseña" id="contraseña" value="">
                 </div>
             </div>
 
             <div>
                 <label for="contraseña_2"> Verifique su Contraseña: </label>
                 <div>
-                    <input type="password" name="contraseña_2" id="contraseña_2" value="{{ old('contraseña_2') }}">
+                    <input type="password" name="contraseña_2" id="contraseña_2" value="">
                 </div>
             </div>
             <a href="{{url('usuario')}}">
