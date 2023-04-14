@@ -25,6 +25,7 @@
                     <th>ID de la Asignatura</th>
                     <th> </th>
                     <th>Acciones</th>
+                    <td><a href="#"></td>
                     
                 </tr>
             </thead>
@@ -35,6 +36,7 @@
                         <td>{{ $tema->tema }}</td>
                         <td>{{ $tema->subject_id }}</td>
                         <td><a href="{{ url('tema/'.$tema->id.'/edit') }}" ><img src="https://cdn.icon-icons.com/icons2/34/PNG/256/documentediting_editdocuments_text_documentedi_2820.png" alt="Editar" height="32px" width="32px"></a></td>
+                        <td><a href="#"></td>
                         <td><br>
                             <form action="{{ url('tema/'.$tema->id) }}" method="POST">
                             @method('DELETE')
