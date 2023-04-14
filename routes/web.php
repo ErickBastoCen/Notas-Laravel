@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\SubjectController;
+use App\Http\Controllers\TopicController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -34,3 +35,4 @@ require __DIR__.'/auth.php';
 
 Route::resource('/usuario', UserController::class);
 Route::resource('/asignatura', SubjectController::class);
+Route::resource('/tema', TopicController::class);
