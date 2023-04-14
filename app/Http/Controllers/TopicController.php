@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Topic;
+use App\Models\Subject;
 use Illuminate\Http\Request;
 
 class TopicController extends Controller
@@ -20,7 +21,8 @@ class TopicController extends Controller
      */
     public function create()
     {
-        //
+        
+        return view('topic.create', ['subject' => Subject::all()]);
     }
 
     /**
@@ -28,7 +30,18 @@ class TopicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request -> validate([
+            
+            'tema' =>'required|max:255',
+            'subject_id' =>'required|',
+            
+        ]);
+        $tema = new Topic();
+        $tema->tema = $request->input('tema');
+        $tema->subject_id = $request->input('subject_id');
+        $tema->save();
+        return view('topic.index');
+    
     }
 
     /**
