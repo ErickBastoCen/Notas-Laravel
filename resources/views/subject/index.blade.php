@@ -16,4 +16,31 @@
         Agregar Asignaturas
     </a>
     <br>
+    <center>
+        <table class="table-fixed">
+            <thead>
+                <tr class="bg-yellow-400">
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Clave</th>
+                    <th>Ingeniería</th>
+                    <th>Semestre</th>
+                    <th>Acciones</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($asignaturas as $asignatura)
+                    <tr>
+                        <td>{{ $asignatura->id }}</td>
+                        <td>{{ $asignatura->nombre }}</td>
+                        <td>{{ $asignatura->clave }}</td>
+                        <td>{{ $asignatura->ing }}</td>
+                        <td>{{ $asignatura->semestre }}</td>
+                        
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </center>
 </main>

@@ -12,7 +12,10 @@ class SubjectController extends Controller
      */
     public function index()
     {
-        return view('subject.index');
+        $subjects = Subject::all();
+
+        return view('subject.index', ['asignaturas' => $subjects]);
+        
     }
 
     /**
