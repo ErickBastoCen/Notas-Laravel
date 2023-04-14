@@ -20,7 +20,7 @@ class SubjectController extends Controller
      */
     public function create()
     {
-        //
+        return view('subject.create');
     }
 
     /**
@@ -28,7 +28,21 @@ class SubjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request -> validate([
+            
+            'nombre' =>'required|max:255',
+            'clave' =>'required|max:7',
+            'ingenieria' =>'required|max:3',
+            'semestre'=>'required|max:1',
+            
+        ]);
+        $asignatura = new Subject();
+        $asignatura->nombre = $request->input('nombre');
+        $asignatura->clave = $request->input('clave');
+        $asignatura->ing = $request->input('ingenieria');
+        $asignatura->semestre = $request->input('semestre');
+        $asignatura->save();
+        return view('subject.index');
     }
 
     /**
