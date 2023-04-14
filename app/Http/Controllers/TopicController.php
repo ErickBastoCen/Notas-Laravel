@@ -13,7 +13,8 @@ class TopicController extends Controller
      */
     public function index()
     {
-        return view('topic.index');
+        $topics = Topic::all();
+        return view('topic.index',['temas' => $topics]);
     }
 
     /**

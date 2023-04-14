@@ -16,4 +16,28 @@
         Agregar Temas
     </a>
     <br>
+    <center>
+        <table class="table-fixed">
+            <thead>
+                <tr class="bg-yellow-400">
+                    <th>ID</th>
+                    <th>Tema</th>
+                    <th>ID de la Asignatura</th>
+                    <th> </th>
+                    <th>Acciones</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($temas as $tema)
+                    <tr>
+                        <td>{{ $tema->id }}</td>
+                        <td>{{ $tema->tema }}</td>
+                        <td>{{ $tema->subject_id }}</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                @endforeach
+        </table>
+    </center>
 </main>
