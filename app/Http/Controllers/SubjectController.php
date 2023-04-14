@@ -92,8 +92,11 @@ class SubjectController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Subject $subject)
+    public function destroy($id)
     {
-        //
+        $asignatura = Subject::find($id);
+        $asignatura->delete();
+        $subjects = Subject::all();
+        return view('subject.index', ['asignaturas' => $subjects]);
     }
 }
