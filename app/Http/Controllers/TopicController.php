@@ -13,8 +13,8 @@ class TopicController extends Controller
      */
     public function index()
     {
-        $topics = Topic::all();
-        return view('topic.index',['temas' => $topics]);
+        
+        return view('topic.index',['temas' => Topic::all()],['asignaturas' => Subject::all()]);
     }
 
     /**
@@ -41,7 +41,7 @@ class TopicController extends Controller
         $tema->tema = $request->input('tema');
         $tema->subject_id = $request->input('subject_id');
         $tema->save();
-        return view('topic.index');
+        return view('topic.index',['temas' => Topic::all()],['asignaturas' => Subject::all()]);
     
     }
 
@@ -56,17 +56,28 @@ class TopicController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Topic $topic)
+    public function edit($id)
     {
-        //
+        $topics = Topic::find($id);
+        return view('topic.edit', ['tema' => $topics],['subject' => Subject::all()]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Topic $topic)
+    public function update(Request $request, $id)
     {
-        //
+        $request -> validate([
+            
+            'tema' =>'required|max:255',
+            'subject_id' =>'required|',
+            
+        ]);
+        $tema = Topic::find($id);
+        $tema->tema = $request->input('tema');
+        $tema->subject_id = $request->input('subject_id');
+        $tema->save();
+        return view('topic.index',['temas' => Topic::all()],['asignaturas' => Subject::all()]);
     }
 
     /**

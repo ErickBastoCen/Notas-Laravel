@@ -34,7 +34,7 @@
                         <td>{{ $tema->id }}</td>
                         <td>{{ $tema->tema }}</td>
                         <td>{{ $tema->subject_id }}</td>
-                        <td></td>
+                        <td><a href="{{ url('tema/'.$tema->id.'/edit') }}" ><img src="https://cdn.icon-icons.com/icons2/34/PNG/256/documentediting_editdocuments_text_documentedi_2820.png" alt="Editar" height="32px" width="32px"></a></td>
                         <td></td>
                     </tr>
                 @endforeach

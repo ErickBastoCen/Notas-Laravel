@@ -1,6 +1,6 @@
 @extends ('layout/template')
 
-@section('title', 'Actualizar | TEC MOTUL')
+@section('title', 'Actualizar Usuario | TEC MOTUL')
 
 @section('contenido')
 
