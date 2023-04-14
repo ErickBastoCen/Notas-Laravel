@@ -83,8 +83,10 @@ class TopicController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Topic $topic)
+    public function destroy($id)
     {
-        //
+        $tema = Topic::find($id);
+        $tema->delete();
+        return view('topic.index',['temas' => Topic::all()],['asignaturas' => Subject::all()]);
     }
 }
