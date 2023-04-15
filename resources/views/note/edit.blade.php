@@ -1,13 +1,13 @@
 @extends ('layout/template')
 
-@section('title', 'Agregar Notas | TEC MOTUL')
+@section('title', 'Editar Notas | TEC MOTUL')
 
 @section('contenido')
 
 
 <main>
     <div>
-        <h1 class="text-3xl font-bold underline">Agregar Notas</h1>
+        <h1 class="text-3xl font-bold underline">Editar Notas</h1>
 
         @if ($errors->any())
         <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
@@ -21,26 +21,27 @@
         
     </div>
     <center>
-        <form action="{{url('nota')}}" method="post">
+        <form action="{{url('nota/'.$notas->id )}}" method="post">
+            @method("PUT")
             @csrf
             <div>
                 <label for="anotacion"> Anotaciones: </label>
                 <div>
-                    <input type="text" name="anotacion" id="anotacion" value="{{ old('anotacion') }}">
+                    <input type="text" name="anotacion" id="anotacion" value="{{ $notas->anotaciones }}">
                 </div>
             </div>
 
             <div>
                 <label for="palabras_clave"> Palabras Clave: </label>
                 <div>
-                    <input type="text" name="palabras_clave" id="palabras_clave" value="{{ old('palabras_clave') }}">
+                    <input type="text" name="palabras_clave" id="palabras_clave" value="{{ $notas->palabras_clave }}">
                 </div>
             </div>
 
             <div>
                 <label for="resumen"> Resumen: </label>
                 <div>
-                    <input type="text" name="resumen" id="resumen" value="{{ old('resumen') }}">
+                    <input type="text" name="resumen" id="resumen" value="{{ $notas->resumen }}">
                 </div>
             </div>
 
@@ -67,7 +68,6 @@
                     </select>
                 </div>
             </div>
-            
 
             <a href="{{url('nota')}}">
                     Regresar

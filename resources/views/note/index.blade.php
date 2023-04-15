@@ -40,6 +40,7 @@
                         <td>{{ $nota->resumen }}</td>
                         <td>{{ $nota->user_id }}</td>
                         <td>{{ $nota->topic_id }}</td>
+                        <td><td><a href="{{ url('nota/'.$nota->id.'/edit') }}" ><img src="https://cdn.icon-icons.com/icons2/34/PNG/256/documentediting_editdocuments_text_documentedi_2820.png" alt="Editar" height="32px" width="32px"></a></td>
                         
                     </tr>
                 @endforeach

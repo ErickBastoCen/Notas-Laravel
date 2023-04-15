@@ -60,17 +60,34 @@ class NoteController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Note $note)
+    public function edit($id)
     {
-        //
+        $notes = Note::find($id);
+        return view('note.edit', ['notas' => $notes], ['users' => User::all(), 'topics' => Topic::all()]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Note $note)
+    public function update(Request $request, $id)
     {
-        //
+        $request -> validate([
+            
+            'anotacion' =>'required|max:500',
+            'palabras_clave' =>'required|max:500',
+            'resumen' =>'required|max:500',
+            'user_id' =>'required|',
+            'topic_id' =>'required|',
+            
+        ]);
+        $nota = Note::find($id);
+        $nota->anotaciones = $request->input('anotacion');
+        $nota->palabras_clave = $request->input('palabras_clave');
+        $nota->resumen = $request->input('resumen');
+        $nota->user_id = $request->input('user_id');
+        $nota->topic_id = $request->input('topic_id');
+        $nota->save();
+        return view('note.index',['notas' => Note::all()]);
     }
 
     /**
