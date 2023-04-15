@@ -93,8 +93,10 @@ class NoteController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Note $note)
+    public function destroy($id)
     {
-        //
+        $nota = Note::find($id);
+        $nota->delete();
+        return view('note.index',['notas' => Note::all()]);
     }
 }
