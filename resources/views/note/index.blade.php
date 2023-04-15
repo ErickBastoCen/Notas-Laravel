@@ -16,4 +16,34 @@
         Agregar Notas
     </a>
     <br>
+    <br>
+    <center>
+        <table class="table-fixed">
+            <thead>
+                <tr class="bg-yellow-400">
+                    <th>ID</th>
+                    <th>Anotaciones</th>
+                    <th>Palabras clave</th>
+                    <th>Resumen</th>
+                    <th>ID de Usuario</th>
+                    <th>ID del Tema</th>
+                    <th>Acciones</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($notas as $nota)
+                    <tr>
+                        <td>{{ $nota->id }}</td>
+                        <td>{{ $nota->anotaciones }}</td>
+                        <td>{{ $nota->palabras_clave }}</td>
+                        <td>{{ $nota->resumen }}</td>
+                        <td>{{ $nota->user_id }}</td>
+                        <td>{{ $nota->topic_id }}</td>
+                        
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </center>
 </main>
