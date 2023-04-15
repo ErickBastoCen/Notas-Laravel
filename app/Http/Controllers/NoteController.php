@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Note;
+use App\Models\Topic;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class NoteController extends Controller
@@ -20,7 +22,7 @@ class NoteController extends Controller
      */
     public function create()
     {
-        //
+        return view('note.create', ['topics' => Topic::all()],['users' => User::all()]);
     }
 
     /**
@@ -28,7 +30,23 @@ class NoteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request -> validate([
+            
+            'anotacion' =>'required|max:500',
+            'palabras_clave' =>'required|max:500',
+            'resumen' =>'required|max:500',
+            'user_id' =>'required|',
+            'topic_id' =>'required|',
+            
+        ]);
+        $nota = new Note();
+        $nota->anotaciones = $request->input('anotacion');
+        $nota->palabras_clave = $request->input('palabras_clave');
+        $nota->resumen = $request->input('resumen');
+        $nota->user_id = $request->input('user_id');
+        $nota->topic_id = $request->input('topic_id');
+        $nota->save();
+        return view('note.index');
     }
 
     /**
