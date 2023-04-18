@@ -20,12 +20,12 @@
             @if (Route::has('login'))
                 <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right">
                     @auth
-                        <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</a>
+                        <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Notas</a>
                     @else
-                        <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
+                        <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Iniciar Sesión</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
+                            <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Registrarse</a>
                         @endif
                     @endauth
                 </div>
@@ -33,107 +33,107 @@
 
             <div class="max-w-7xl mx-auto p-6 lg:p-8">
                 <div class="flex justify-center">
-                    <svg viewBox="0 0 62 65" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto bg-gray-100 dark:bg-gray-900">
-                        <path d="M61.8548 14.6253C61.8778 14.7102 61.8895 14.7978 61.8897 14.8858V28.5615C61.8898 28.737 61.8434 28.9095 61.7554 29.0614C61.6675 29.2132 61.5409 29.3392 61.3887 29.4265L49.9104 36.0351V49.1337C49.9104 49.4902 49.7209 49.8192 49.4118 49.9987L25.4519 63.7916C25.3971 63.8227 25.3372 63.8427 25.2774 63.8639C25.255 63.8714 25.2338 63.8851 25.2101 63.8913C25.0426 63.9354 24.8666 63.9354 24.6991 63.8913C24.6716 63.8838 24.6467 63.8689 24.6205 63.8589C24.5657 63.8389 24.5084 63.8215 24.456 63.7916L0.501061 49.9987C0.348882 49.9113 0.222437 49.7853 0.134469 49.6334C0.0465019 49.4816 0.000120578 49.3092 0 49.1337L0 8.10652C0 8.01678 0.0124642 7.92953 0.0348998 7.84477C0.0423783 7.8161 0.0598282 7.78993 0.0697995 7.76126C0.0884958 7.70891 0.105946 7.65531 0.133367 7.6067C0.152063 7.5743 0.179485 7.54812 0.20192 7.51821C0.230588 7.47832 0.256763 7.43719 0.290416 7.40229C0.319084 7.37362 0.356476 7.35243 0.388883 7.32751C0.425029 7.29759 0.457436 7.26518 0.498568 7.2415L12.4779 0.345059C12.6296 0.257786 12.8015 0.211853 12.9765 0.211853C13.1515 0.211853 13.3234 0.257786 13.475 0.345059L25.4531 7.2415H25.4556C25.4955 7.26643 25.5292 7.29759 25.5653 7.32626C25.5977 7.35119 25.6339 7.37362 25.6625 7.40104C25.6974 7.43719 25.7224 7.47832 25.7523 7.51821C25.7735 7.54812 25.8021 7.5743 25.8196 7.6067C25.8483 7.65656 25.8645 7.70891 25.8844 7.76126C25.8944 7.78993 25.9118 7.8161 25.9193 7.84602C25.9423 7.93096 25.954 8.01853 25.9542 8.10652V33.7317L35.9355 27.9844V14.8846C35.9355 14.7973 35.948 14.7088 35.9704 14.6253C35.9792 14.5954 35.9954 14.5692 36.0053 14.5405C36.0253 14.4882 36.0427 14.4346 36.0702 14.386C36.0888 14.3536 36.1163 14.3274 36.1375 14.2975C36.1674 14.2576 36.1923 14.2165 36.2272 14.1816C36.2559 14.1529 36.292 14.1317 36.3244 14.1068C36.3618 14.0769 36.3942 14.0445 36.4341 14.0208L48.4147 7.12434C48.5663 7.03694 48.7383 6.99094 48.9133 6.99094C49.0883 6.99094 49.2602 7.03694 49.4118 7.12434L61.3899 14.0208C61.4323 14.0457 61.4647 14.0769 61.5021 14.1055C61.5333 14.1305 61.5694 14.1529 61.5981 14.1803C61.633 14.2165 61.6579 14.2576 61.6878 14.2975C61.7103 14.3274 61.7377 14.3536 61.7551 14.386C61.7838 14.4346 61.8 14.4882 61.8199 14.5405C61.8312 14.5692 61.8474 14.5954 61.8548 14.6253ZM59.893 27.9844V16.6121L55.7013 19.0252L49.9104 22.3593V33.7317L59.8942 27.9844H59.893ZM47.9149 48.5566V37.1768L42.2187 40.4299L25.953 49.7133V61.2003L47.9149 48.5566ZM1.99677 9.83281V48.5566L23.9562 61.199V49.7145L12.4841 43.2219L12.4804 43.2194L12.4754 43.2169C12.4368 43.1945 12.4044 43.1621 12.3682 43.1347C12.3371 43.1097 12.3009 43.0898 12.2735 43.0624L12.271 43.0586C12.2386 43.0275 12.2162 42.9888 12.1887 42.9539C12.1638 42.9203 12.1339 42.8916 12.114 42.8567L12.1127 42.853C12.0903 42.8156 12.0766 42.7707 12.0604 42.7283C12.0442 42.6909 12.023 42.656 12.013 42.6161C12.0005 42.5688 11.998 42.5177 11.9931 42.4691C11.9881 42.4317 11.9781 42.3943 11.9781 42.3569V15.5801L6.18848 12.2446L1.99677 9.83281ZM12.9777 2.36177L2.99764 8.10652L12.9752 13.8513L22.9541 8.10527L12.9752 2.36177H12.9777ZM18.1678 38.2138L23.9574 34.8809V9.83281L19.7657 12.2459L13.9749 15.5801V40.6281L18.1678 38.2138ZM48.9133 9.14105L38.9344 14.8858L48.9133 20.6305L58.8909 14.8846L48.9133 9.14105ZM47.9149 22.3593L42.124 19.0252L37.9323 16.6121V27.9844L43.7219 31.3174L47.9149 33.7317V22.3593ZM24.9533 47.987L39.59 39.631L46.9065 35.4555L36.9352 29.7145L25.4544 36.3242L14.9907 42.3482L24.9533 47.987Z" fill="#FF2D20"/>
-                    </svg>
-                </div>
-
-                <div class="mt-16">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-                        <a href="https://laravel.com/docs" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-                                    </svg>
-                                </div>
-
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Documentation</h2>
-
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laravel has wonderful documentation covering every aspect of the framework. Whether you are a newcomer or have prior experience with Laravel, we recommend reading our documentation from beginning to end.
-                                </p>
-                            </div>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </a>
-
-                        <a href="https://laracasts.com" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z" />
-                                    </svg>
-                                </div>
-
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Laracasts</h2>
-
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                </p>
-                            </div>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </a>
-
-                        <a href="https://laravel-news.com" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" />
-                                    </svg>
-                                </div>
-
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Laravel News</h2>
-
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                </p>
-                            </div>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </a>
-
-                        <div class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.115 5.19l.319 1.913A6 6 0 008.11 10.36L9.75 12l-.387.775c-.217.433-.132.956.21 1.298l1.348 1.348c.21.21.329.497.329.795v1.089c0 .426.24.815.622 1.006l.153.076c.433.217.956.132 1.298-.21l.723-.723a8.7 8.7 0 002.288-4.042 1.087 1.087 0 00-.358-1.099l-1.33-1.108c-.251-.21-.582-.299-.905-.245l-1.17.195a1.125 1.125 0 01-.98-.314l-.295-.295a1.125 1.125 0 010-1.591l.13-.132a1.125 1.125 0 011.3-.21l.603.302a.809.809 0 001.086-1.086L14.25 7.5l1.256-.837a4.5 4.5 0 001.528-1.732l.146-.292M6.115 5.19A9 9 0 1017.18 4.64M6.115 5.19A8.965 8.965 0 0112 3c1.929 0 3.716.607 5.18 1.64" />
-                                    </svg>
-                                </div>
-
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</h2>
-
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Forge</a>, <a href="https://vapor.laravel.com" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Vapor</a>, <a href="https://nova.laravel.com" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Nova</a>, and <a href="https://envoyer.io" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Telescope</a>, and more.
-                                </p>
-                            </div>
+                <svg
+                    width="100%"
+                    height="100%"
+                    viewBox="0 0 500 150"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xml:space="preserve"
+                    xmlns:serif="http://www.serif.com/"
+                    style="
+                    fill-rule: evenodd;
+                    clip-rule: evenodd;
+                    stroke-miterlimit: 1.5;
+                    "
+                >
+                    <rect
+                    id="Mesa-de-trabajo4"
+                    serif:id="Mesa de trabajo4"
+                    x="0"
+                    y="0"
+                    width="500"
+                    height="150"
+                    style="fill: none"
+                    />
+                    <g>
+                    <g>
+                        <g>
+                        <g id="Capa2">
+                            <path
+                            d="M82.775,89.986l-9.562,-15.753l-18.702,-0.24c0,0 9.563,15.754 9.563,15.754l18.701,0.239Z"
+                            style="fill: none; stroke: #023047; stroke-width: 6px"
+                            />
+                            <path
+                            d="M45.378,89.504l9.133,-15.511c0,0 9.563,15.755 9.563,15.754c0,0.001 -9.135,15.509 -9.135,15.509l-9.561,-15.752Z"
+                            style="fill: none; stroke: #023047; stroke-width: 6px"
+                            />
+                            <path
+                            d="M64.074,89.747l-9.135,15.509l18.697,0.245l9.139,-15.515l-18.701,-0.239Z"
+                            style="fill: none; stroke: #023047; stroke-width: 6px"
+                            />
+                        </g>
+                        <path
+                            d="M71.072,58.44c-3.555,-1.955 -4.912,0.592 -8.244,0.633l-1.686,-5.366c-4.894,0.247 -9.664,1.424 -14.038,3.463l1.445,5.426c-2.909,1.498 -5.543,3.435 -7.807,5.74l-5.093,-2.744c-3.188,3.521 -5.61,7.633 -7.126,12.099l4.97,2.951c-0.905,3.074 -1.299,6.279 -1.168,9.497l-5.517,1.486c0.385,4.733 1.731,9.37 3.96,13.648l5.584,-1.253c1.629,2.849 3.706,5.445 6.155,7.691l-2.709,4.845c3.733,3.172 8.057,5.619 12.726,7.202l2.927,-4.722c3.209,0.955 6.541,1.42 9.872,1.379l1.686,5.366c4.894,-0.247 9.664,-1.423 14.038,-3.463l-1.445,-5.425c2.909,-1.498 5.544,-3.436 7.807,-5.741l5.093,2.744c3.188,-3.521 5.61,-7.632 7.127,-12.099l-4.971,-2.951c0.905,-3.074 1.299,-6.278 1.168,-9.497l5.517,-1.486c-0.385,-4.732 -1.731,-9.37 -3.959,-13.647l-5.585,1.252c-1.629,-2.849 -0.712,-4.696 -3.383,-6.649"
+                            style="
+                            fill: none;
+                            stroke: #023047;
+                            stroke-width: 6px;
+                            stroke-linecap: square;
+                            "
+                        />
+                        </g>
+                        <path
+                        d="M69.034,61.836l19.288,-32.745l-8.61,-4.872"
+                        style="fill: none; stroke: #023047; stroke-width: 6px"
+                        />
+                        <path
+                        d="M86.255,71.582l19.289,-32.745l8.61,4.872"
+                        style="fill: none; stroke: #023047; stroke-width: 6px"
+                        />
+                    </g>
+                    <path
+                        d="M132.38,113.192l-0,-49.971l7.193,-0l-0,49.971l-7.193,0Zm6.953,-49.731l-6.713,-0l-0,49.491l6.713,0l0,-49.491Zm-6.953,-0.24l-0,49.971l7.193,0l-0,-49.971l-7.193,-0Z"
+                        style="fill: #023047; fill-rule: nonzero"
+                    />
+                    <path
+                        d="M180.545,84.651c-0,-0 -14.296,-0 -14.296,-0c-0.409,-0.035 -0.823,-0.055 -1.241,-0.055c-0.243,-0 -0.484,0.008 -0.725,0.02c-3.574,-0.354 -6.374,-3.377 -6.374,-7.043c-0,-3.903 3.174,-7.078 7.078,-7.078l15.8,0c3.666,0.132 6.627,3.052 6.828,6.702l7.2,-0c-0.067,-2.436 -0.743,-4.719 -1.877,-6.702c-0.002,-0.002 -0.002,-0.005 -0.005,-0.007c-2.409,-4.196 -6.883,-7.056 -12.038,-7.186l-15.908,0c-5.306,0 -9.936,2.897 -12.396,7.193c-1.194,2.086 -1.875,4.503 -1.875,7.078c0,2.575 0.681,4.992 1.875,7.078c0.599,1.045 1.326,2.007 2.16,2.865c2.592,2.668 6.22,4.328 10.236,4.328l15.558,-0c3.903,-0 7.078,3.174 7.078,7.077c-0,3.904 -3.175,7.078 -7.078,7.078l-15.537,0c-3.786,0 -6.886,-2.973 -7.092,-6.708l-7.2,-0c0.067,2.438 0.746,4.723 1.882,6.708c2.467,4.297 7.099,7.193 12.41,7.193l15.537,0c5.306,0 9.935,-2.896 12.395,-7.193c1.194,-2.086 1.875,-4.503 1.875,-7.078c0,-2.575 -0.681,-4.991 -1.875,-7.077c-2.46,-4.297 -7.089,-7.193 -12.395,-7.193Z"
+                        style="fill: #023047; fill-rule: nonzero"
+                    />
+                    <path
+                        d="M241.308,105.999c-8.576,0 -15.755,-6.083 -17.452,-14.163c-0.247,-1.184 -0.379,-2.412 -0.379,-3.668c-0,-1.206 0.12,-2.386 0.35,-3.524c1.64,-8.15 8.854,-14.307 17.481,-14.307c7.363,0 13.697,4.486 16.414,10.868l7.624,0c-3.011,-10.432 -12.635,-18.061 -24.038,-18.061c-12.624,0 -23.065,9.348 -24.775,21.5c-0.165,1.15 -0.249,2.328 -0.249,3.524c-0,1.247 0.091,2.472 0.268,3.668c1.775,12.082 12.183,21.356 24.756,21.356c11.12,0 20.547,-7.255 23.803,-17.289l-7.739,-0c-2.884,5.97 -9.001,10.096 -16.064,10.096Z"
+                        style="fill: #023047; fill-rule: nonzero"
+                    />
+                    <path
+                        d="M295.381,105.999l-0,-43.063l-7.193,-0l-0,50.256l38.805,0l0,-7.193l-31.612,0Z"
+                        style="fill: #023047; fill-rule: nonzero"
+                    />
+                    <path
+                        d="M342.272,113.192l9.502,0l15.817,-28.582l-4.726,-8.622l-20.593,37.204Zm32.452,-41.464l-4.752,-8.584l-0.003,0.005l-4.747,8.579l22.948,41.464l9.504,0l-22.95,-41.464Z"
+                        style="fill: #023047; fill-rule: nonzero"
+                    />
+                    <path
+                        d="M465.457,91.906c-0.789,-1.41 -1.808,-2.673 -3.009,-3.738c-0.676,-0.599 -1.411,-1.132 -2.192,-1.596c0.517,-0.625 0.983,-1.293 1.39,-2c0.021,-0.039 0.043,-0.075 0.062,-0.113c1.165,-2.072 1.829,-4.46 1.829,-7.006c0,-2.515 -0.649,-4.879 -1.788,-6.931c-0.034,-0.063 -0.067,-0.125 -0.103,-0.185c-2.47,-4.297 -7.107,-7.193 -12.42,-7.193l-26.446,0l0,7.378l27.99,-0c3.177,0.705 5.557,3.546 5.557,6.931c0,3.517 -2.567,6.445 -5.926,7.006l-20.428,-0l-0,-10.247l-7.193,-0l0,38.98l26.446,0c0.632,0 1.255,-0.042 1.866,-0.122c0.611,0.08 1.234,0.122 1.866,0.122c5.383,0 10.072,-2.971 12.513,-7.363c1.146,-2.057 1.798,-4.428 1.798,-6.948c0,-2.532 -0.656,-4.911 -1.812,-6.975Zm-11.017,13.923l-24.467,-0l-0,-13.923l24.321,-0c3.28,0.626 5.766,3.515 5.766,6.975c-0,3.409 -2.412,6.265 -5.62,6.948Z"
+                        style="fill: #023047; fill-rule: nonzero"
+                    />
+                    </g>
+                </svg>
+                </div>         
+                <div class="max-w-7xl mx-auto p-6 lg:p-8">
+                <div class="flex justify-center">
+                    <a href="{{ route('login') }}" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
+                        <div>
+                            <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">¿Qué hacemos en Notas ISCLAB?</h2>
+                            <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+                                Proporcionamos una herramienta digital para que los usuarios puedan registrar sus apuntes de las asignaturas en cualquier momento, no dejes pasar el momento y empieza a ser parte de esta gran comunidad.
+                            </p>
                         </div>
-                    </div>
-                </div>
-
-                <div class="flex justify-center mt-16 px-0 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 dark:text-gray-400 sm:text-left">
-                        <div class="flex items-center gap-4">
-                            <a href="https://github.com/sponsors/taylorotwell" class="group inline-flex items-center hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="-mt-px mr-1 w-5 h-5 stroke-gray-400 dark:stroke-gray-600 group-hover:stroke-gray-600 dark:group-hover:stroke-gray-400">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                                </svg>
-                                Sponsor
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="ml-4 text-center text-sm text-gray-500 dark:text-gray-400 sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
-                    </div>
-                </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                        </svg>
+                    </a>
+                </div>                 
             </div>
         </div>
     </body>

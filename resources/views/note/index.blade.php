@@ -27,6 +27,7 @@
                     <th>Resumen</th>
                     <th>ID de Usuario</th>
                     <th>ID del Tema</th>
+                    <th><a href="#"></a></th>
                     <th>Acciones</th>
                     <th></th>
                 </tr>
