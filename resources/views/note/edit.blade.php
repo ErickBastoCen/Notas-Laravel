@@ -19,6 +19,7 @@
         </div>
         @endif
         
+        
     </div>
     <center>
         <form action="{{url('nota/'.$notas->id )}}" method="post">
