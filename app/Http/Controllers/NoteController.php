@@ -14,7 +14,9 @@ class NoteController extends Controller
      */
     public function index()
     {
-        return view('note.index',['notas' => Note::all()]);
+        $usuario_id =auth()->id();
+        $notas = Note::where('user_id',$usuario_id)->get();
+        return view('note.index',compact('notas'));
     }
 
     /**
@@ -46,7 +48,9 @@ class NoteController extends Controller
         $nota->user_id = $request->input('user_id');
         $nota->topic_id = $request->input('topic_id');
         $nota->save();
-        return view('note.index',['notas' => Note::all()]);
+        $usuario_id =auth()->id();
+        $notas = Note::where('user_id',$usuario_id)->get();
+        return view('note.index',compact('notas'));
     }
 
     /**

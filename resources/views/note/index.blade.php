@@ -5,8 +5,8 @@
 @section('contenido')
 
 <main>
-    <div >
-        <h1 class="text-3xl font-bold underline">
+    <div class="bg-blue-100 dark:bg-blue-900">
+        <h1 class="text-3xl font-bold underline text-white">
             Listado de Notas
         </h1>
     </div>

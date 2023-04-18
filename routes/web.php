@@ -38,4 +38,4 @@ Route::resource('/usuario', UserController::class);
 Route::resource('/asignatura', SubjectController::class);
 Route::resource('/tema', TopicController::class);
 Route::resource('/nota', NoteController::class)->middleware('auth');
-Route::get('/nota', [NoteController::class, 'index'])->name('notas.index')->middleware('auth');;
+Route::get('/nota', [NoteController::class, 'index'])->name('note.index')->middleware('auth');;
