@@ -18,29 +18,23 @@
     <br>
     <br>
     <center>
-        <table class="table-fixed">
+        <table class="table-fixed border-separate border-spacing-2 border border-slate-500">
             <thead>
                 <tr class="bg-yellow-400">
-                    <th>ID</th>
                     <th>Anotaciones</th>
                     <th>Palabras clave</th>
                     <th>Resumen</th>
-                    <th>ID del Tema</th>
-                    <th><a href="#"></a></th>
-                    <th>Acciones</th>
-                    <th><a href="#"></a></th>
-                    <th><a href="#"></a></th>
-                    <th></th>
+                    <th>Fecha de modificación</th>
+                    
                 </tr>
             </thead>
             <tbody>
                 @foreach ($notas as $nota)
                     <tr>
-                        <td>{{ $nota->id }}</td>
                         <td>{{ $nota->anotaciones }}</td>
                         <td>{{ $nota->palabras_clave }}</td>
                         <td>{{ $nota->resumen }}</td>
-                        <td>{{ $nota->topic_id }}</td>
+                        <td>{{ $nota->updated_at }}</td>
                         <td><td><a href="{{ url('nota/'.$nota->id) }}" ><img src="https://cdn.icon-icons.com/icons2/2065/PNG/512/view_show_icon_124811.png" alt="Ver" height="20px" width="20px"></a></td>
                         <td><td><a href="{{ url('nota/'.$nota->id.'/edit') }}" ><img src="https://cdn.icon-icons.com/icons2/34/PNG/256/documentediting_editdocuments_text_documentedi_2820.png" alt="Editar" height="32px" width="32px"></a></td>
                         <td><br>
