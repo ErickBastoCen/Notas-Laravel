@@ -5,6 +5,7 @@ use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\TopicController;
 use App\Http\Controllers\NoteController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ReminderController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,5 +38,6 @@ require __DIR__.'/auth.php';
 Route::resource('/usuario', UserController::class);
 Route::resource('/asignatura', SubjectController::class);
 Route::resource('/tema', TopicController::class);
+Route::resource('/recordatorios', ReminderController::class);
 Route::resource('/nota', NoteController::class)->middleware('auth');
 Route::get('/nota', [NoteController::class, 'index'])->name('note.index')->middleware('auth');;
