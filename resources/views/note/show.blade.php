@@ -18,7 +18,7 @@
           </div>
         </div>
         <br>
-    
+        <div class="bg-gray-400">
             <div>
                 <label class= "block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="anotacion"> Anotaciones: </label>
                 <div>
@@ -47,11 +47,14 @@
                     
                 </div>
             </div>
+        </div>
 
 
-            <a href="{{url('nota')}}">
-                    Regresar
-            </a>
+            <div>
+                <a href="{{url('nota')}}" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                        Regresar
+                </a> 
+            </div> 
         </div>
     </center>
 </main>

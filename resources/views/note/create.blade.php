@@ -30,6 +30,7 @@
           </div>
         </div>
         <br>
+        <div class="bg-gray-400">
         <form action="{{url('nota')}}" method="post">
             @csrf
             <div>
@@ -77,19 +78,25 @@
                     </select>
                 </div>
             </div>
-            
-            <div class="md:col-span-5 text-right">
-                <div class="inline-flex items-end">
+            <br>            
+            <br>
+            <div>
+                <div>
                     <button type="submit" class="inline-flex items-center px-4 py-2 bg-gray-800 dark:bg-gray-200 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-800 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus:bg-white active:bg-gray-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition ease-in-out duration-150 ml-4">
                             Registrar
                     </button>
                 </div>
+                <br>            
+            <br>
             </div>
-            <a href="{{url('nota')}}">
-                Regresar
-            </a>
-            
-        </form>
+            </div>
+        </form> 
     </div>
+    <div>
+            <a href="{{url('nota')}}" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                    Regresar
+            </a> 
+
+        </div>
     </center>
 </main>

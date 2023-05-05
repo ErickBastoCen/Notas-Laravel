@@ -35,8 +35,8 @@
                         <td>{{ $nota->palabras_clave }}</td>
                         <td>{{ $nota->resumen }}</td>
                         <td>{{ $nota->updated_at }}</td>
-                        <td><td><a href="{{ url('nota/'.$nota->id) }}" ><img src="https://cdn.icon-icons.com/icons2/2065/PNG/512/view_show_icon_124811.png" alt="Ver" height="30px" width="30px"></a></td>
-                        <td><td><a href="{{ url('nota/'.$nota->id.'/edit') }}" ><img src="https://cdn.icon-icons.com/icons2/34/PNG/256/documentediting_editdocuments_text_documentedi_2820.png" alt="Editar" height="42px" width="42px"></a></td>
+                        <td><a href="{{ url('nota/'.$nota->id) }}" ><img src="https://cdn.icon-icons.com/icons2/2065/PNG/512/view_show_icon_124811.png" alt="Ver" height="30px" width="30px"></a></td>
+                        <td><a href="{{ url('nota/'.$nota->id.'/edit') }}" ><img src="https://cdn.icon-icons.com/icons2/34/PNG/256/documentediting_editdocuments_text_documentedi_2820.png" alt="Editar" height="42px" width="42px"></a></td>
                         <td><br>
                             <form action="{{ url('nota/'.$nota->id) }}" method="POST">
                             @method('DELETE')

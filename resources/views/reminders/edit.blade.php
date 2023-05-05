@@ -30,13 +30,14 @@
         </div>
         <br>
 </div>
+        <div class="bg-gray-400">
         <form action="{{url('recordatorios/'.$recordatorios->id )}}" method="post">
             @method("PUT")
             @csrf
             <div>
                 <label for="note_id" class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"> Nota: </label>
                 <div>
-                    <select name="note_id" id="note_id">
+                <select name="note_id" id="note_id" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                         <option value="">Seleccione una nota</option>
                         @foreach ($notes as $note)
                             <option value="{{ $note->id }}">{{ $note->resumen }}</option>
@@ -66,17 +67,22 @@
             </div>
             <br>
             <br>
-            <div class="md:col-span-5 text-right">
-                <div class="inline-flex items-end">
+            <div>
+                <div>
                     <button type="submit" class="inline-flex items-center px-4 py-2 bg-gray-800 dark:bg-gray-200 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-800 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus:bg-white active:bg-gray-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition ease-in-out duration-150 ml-4">
                         Registrar
                     </button>
                 </div>
             </div>
-            <a href="{{url('recordatorios')}}">
-                    Regresar
-            </a>            
+            <br>
+            <br>         
         </form>
         </div>
+    </div>
+    <div>
+            <a href="{{url('recordatorios')}}" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                    Regresar
+            </a> 
+        </div> 
     </center>
 </main>
